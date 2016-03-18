@@ -1,0 +1,54 @@
+<p id="notice"><%= notice %></p>
+<style type="text/css">
+	.msd
+	{
+		margin-top: 2cm;
+		margin-left: 5cm;
+		font-size: 1.2em;
+	}
+	.ko
+	{
+		font-size: 1em;
+	    text-align: center;
+	}
+	.ro
+	{
+		font-size: 1.2em;
+	}
+	.isd
+      {
+        font-size: 1.5em;
+        
+        text-align: center;
+        text-decoration: underline;
+        
+      }
+</style>
+
+<div class="ko">
+<h1><u>Doctor Details</u></h1>
+</div>
+
+<p class="isd">
+  <strong><b>Branch:</b></strong>
+  <%= @hospital.branch %>
+</p>
+
+<div class="msd">
+
+<p class="ro">
+  <strong>Name:</strong>
+  <%= @doctor.name %>
+</p>
+
+<p class="ro">
+  <strong>Contact:</strong>
+  <%= @doctor.contact %>
+</p>
+<br>
+
+<%= link_to 'Doctors', hospital_doctors_path(@hospital.id) %> |
+<%= link_to 'Edit Doctor Details', edit_hospital_doctor_path(@hospital.id,@doctor.id) %> |
+<%= link_to 'Appointments', doctor_appointments_path(@doctor.id) %> |
+<%= link_to 'Get Appointments', hospital_doctor_path(:hospital_id => @doctors.first.hospital_id , :id => @doctors.first.id, format: "csv") %> 
+</div>

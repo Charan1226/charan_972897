@@ -1,0 +1,12 @@
+<style type="text/css">
+	.aa
+	{
+		margin-left: 6cm;
+	}
+	</style>
+<h1><u>New Appointment</u></h1>
+
+<%= render 'form' %>
+<div class="aa">
+<%= link_to 'Cancel', doctor_appointments_path(@doctor.id) %>
+</div>

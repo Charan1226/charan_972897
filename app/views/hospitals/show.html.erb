@@ -1,0 +1,38 @@
+<p id="notice"><%= notice %></p>
+<style type="text/css">
+	.msd
+	{
+		margin-top: 2cm;
+		margin-left: 5cm;
+		font-size: 1.2em;
+
+	}
+	.ko
+	{
+		font-size: 1em;
+	    text-align: center;
+	}
+	.ro
+	{
+		font-size: 1.2em;
+	}
+</style>
+<div class="ko">
+<h1><u>Branch Details</u></h1>
+</div>
+<div class="msd">
+	<p class="ro">
+  <strong>Name:</strong>
+  <%= @hospital.name %>
+  </p>
+
+ <p class="ro">
+  <strong>Branch:</strong>
+  <%= @hospital.branch %>
+ </p>
+
+ <%= link_to 'Branches', hospitals_path %>  |
+ <%= link_to 'Doctors', hospital_doctors_path(@hospital.id) %> |
+ <%= link_to 'Get Doctors list', hospital_path(:id => @hospitals.first.id, format: "csv") %> 
+
+</div>

@@ -1,0 +1,58 @@
+<p id="notice"><%= notice %></p>
+<style type="text/css">
+	.msd
+	{
+		margin-top: 2cm;
+		margin-left: 5cm;
+		font-size: 1.2em;
+	}
+	.ko
+	{
+		font-size: 1em;
+	    text-align: center;
+	}
+	.ro
+	{
+		font-size: 1.2em;
+	}
+	.isd
+      {
+        font-size: 1.5em;
+        
+        text-align: center;
+        text-decoration: underline;
+
+      }
+</style>
+
+<div class="ko">
+<h1><u>Appointment Details</u></h1>
+</div>
+
+<p class="isd">
+  <strong><b>Doctor-</b></strong>
+  <%= @doctor.name %>
+</p>
+
+<div class="msd">
+<p class="ro">
+  <strong>Patient:</strong>
+  <%= @appointment.patient %>
+</p>
+
+<br>
+
+<p class="ro">
+  <strong>Problem:</strong> 
+  <%= @appointment.problem %>
+</p> 
+
+<br>
+
+
+
+
+
+       <%= link_to 'Appointments list', doctor_appointments_path(@doctor.id) %> | 
+       <%= link_to 'Edit Appointment', edit_doctor_appointment_path(@doctor.id,@appointment.id) %>
+</div>
